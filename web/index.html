@@ -1,137 +1,14 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>화훼 유통 정보 대시보드 (Portfolio)</title>
-    <style>
-        :root {
-            --primary-color: #4A6CF7;
-            --bg-color: #f8f9fa;
-            --text-color: #333;
-            --border-color: #e0e0e0;
-        }
-
-        body {
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: white;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        header {
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 15px;
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        h1 {
-            font-size: 24px;
-            color: var(--primary-color);
-            margin: 0;
-        }
-
-        .status-badge {
-            background: #eef2ff;
-            color: var(--primary-color);
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        /* 검색 및 필터 섹션 */
-        .filter-section {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-        }
-
-        .filter-item {
-            padding: 8px 15px;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            background: white;
-            font-size: 14px;
-        }
-
-        /* 테이블 스타일 */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-
-        th {
-            background-color: #f1f3f5;
-            color: #495057;
-            font-weight: 600;
-            text-align: left;
-            padding: 12px 15px;
-            border-bottom: 2px solid var(--border-color);
-        }
-
-        td {
-            padding: 12px 15px;
-            border-bottom: 1px solid var(--border-color);
-            font-size: 14px;
-        }
-
-        tr:hover {
-            background-color: #f8f9ff;
-        }
-
-        .price {
-            font-weight: bold;
-            color: #d93025;
-        }
-
-        /* 예측 결과 섹션 (포트폴리오 강조용) */
-        .prediction-card {
-            margin-top: 40px;
-            background: #f0f7ff;
-            border: 1px solid #cce3ff;
-            padding: 20px;
-            border-radius: 8px;
-        }
-
-        .prediction-title {
-            font-weight: bold;
-            color: #0056b3;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-
-        .footer-note {
-            margin-top: 20px;
-            font-size: 12px;
-            color: #888;
-            text-align: center;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <header>
-        <h1>🌸 실시간 경매 실적 리포트</h1>
-        <span class="status-badge">Static Data Mode (2026.01.13)</span>
-    </header>
-
-    <div class="filter-section">
-        <select class="filter-item">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KNU AI Bootcamp - Flower Project</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
