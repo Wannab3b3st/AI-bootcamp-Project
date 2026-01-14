@@ -13,7 +13,7 @@ function App() {
       <div className="info-container">
         <div className="info-item">
           <span className="info-label">MARKET:</span>
-          <span className="info-value">AT화훼(양재)</span>
+          <span className="info-value">aT화훼(양재)</span>
         </div>
         <div className="info-item">
           <span className="info-label">CATEGORY:</span>
