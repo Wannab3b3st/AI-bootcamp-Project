@@ -5,6 +5,7 @@ function App() {
   return (
     <div className="portfolio-wrapper">
       <div className="header-row">
+        {/* 좌측 섹션 */}
         <div className="title-section">
           <h1 className="main-title">
             화훼 경매 금액 예측 AI 서비스
@@ -12,7 +13,8 @@ function App() {
           <div className="info-container">
             <div className="info-item">
               <span className="info-label">MARKET:</span>
-              <span className="info-value">AT화훼(양재)</span>
+              {/* AT를 aT로 수정 */}
+              <span className="info-value">aT화훼(양재)</span>
             </div>
             <div className="info-item">
               <span className="info-label">CATEGORY:</span>
@@ -21,6 +23,7 @@ function App() {
           </div>
         </div>
 
+        {/* 우측 섹션 (노란색 동그라미 위치) */}
         <div className="search-section">
           <div className="search-box">
             <input 
@@ -28,6 +31,7 @@ function App() {
               className="search-input" 
               placeholder="검색" 
             />
+            {/* 돋보기 아이콘 */}
             <span className="search-icon">🔍</span>
           </div>
         </div>
