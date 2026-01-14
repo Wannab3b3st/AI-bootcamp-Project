@@ -13,10 +13,6 @@ function App() {
       {/* 포인트 라인 */}
       <div className="accent-line"></div>
 
-      {/* 서비스 소개 문구 */}
-      <p className="sub-text">
-        데이터 기반의 정교한 분석으로<br />
-        꽃 시장의 다음 걸음을 예측합니다.
       </p>
     </div>
   );
