@@ -2,8 +2,10 @@
 
 :root {
   --deep-green: #004d40;
-  --muted-text: #94a3b8; /* 레이블용 연한 색상 */
-  --border-color: #cbd5e1; /* 밑줄용 색상 */
+  /* 💡 이미지(image_b6ff4f.png)에서 추출한 선명한 블루 색상 */
+  --search-blue: #3b82f6; 
+  --muted-text: #94a3b8;
+  --border-color: #cbd5e1;
 }
 
 body {
@@ -17,7 +19,14 @@ body {
 .portfolio-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 45px 0 0 50px; 
+  padding: 45px 50px 0 50px; 
+}
+
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
 }
 
 .main-title {
@@ -29,32 +38,43 @@ body {
   white-space: nowrap;
 }
 
-/* 💡 타이틀 하단 정보 컨테이너 */
-.info-container {
-  display: flex;
-  gap: 25px;
-  margin-top: 12px;
-}
+.info-container { display: flex; gap: 25px; margin-top: 12px; }
+.info-item { display: flex; align-items: center; gap: 8px; }
+.info-label { font-size: 11px; font-weight: 800; color: var(--muted-text); letter-spacing: 0.05em; }
+.info-value { font-size: 13px; font-weight: 800; color: #1e293b; border-bottom: 1px solid var(--border-color); padding-bottom: 1px; }
 
-.info-item {
+.search-box {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 8px;
 }
 
-/* 레이블 스타일 (MARKET:, CATEGORY:) */
-.info-label {
-  font-size: 11px;
-  font-weight: 800;
-  color: var(--muted-text);
-  letter-spacing: 0.05em;
-}
-
-/* 값 스타일 (AT화훼(양재), 절화) */
-.info-value {
+.search-input {
+  width: 220px;
+  height: 38px;
+  padding: 0 40px 0 18px;
+  /* 기본 테두리는 연하게 설정 */
+  border: 1.5px solid #e2e8f0; 
+  border-radius: 20px;
+  font-family: 'Pretendard', sans-serif;
   font-size: 13px;
-  font-weight: 800;
   color: #1e293b;
-  border-bottom: 1px solid var(--border-color); /* 이미지와 같은 밑줄 효과 */
-  padding-bottom: 1px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* 파란색 테두리 적용 */
+.search-input:focus {
+  border-color: var(--search-blue); 
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1); 
+}
+
+/* 돋보기 아이콘 색상 파란색 변경 */
+.search-icon {
+  position: absolute;
+  right: 15px;
+  font-size: 14px;
+  color: var(--search-blue);
+  cursor: pointer;
+  font-weight: 900;
 }
