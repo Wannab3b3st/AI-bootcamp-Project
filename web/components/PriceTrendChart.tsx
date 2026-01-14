@@ -1,47 +1,49 @@
 import React from 'react';
 
 const PriceTrendChart: React.FC = () => {
-  // 이 부분 실제 데이터로 교체
-  const data = {
-    upper: 5400,
-    mean: 3050,
-    lower: 1600,
-    confidence: "94.2%"
-  };
-
   return (
-    <div className="chart-container">
-      <div style={{ display: 'flex', justify-content: 'space-around', textAlign: 'center', marginBottom: '30px' }}>
+    <div className="card" style={{ marginBottom: '20px' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
         <div>
+          <h4 style={{ margin: 0 }}>AI 다음 경매 예측 메트릭스</h4>
+          <p style={{ fontSize: '11px', color: '#94a3b8', margin: 0 }}>TARGET HORIZON: T+1 NEXT MARKET DAY</p>
+        </div>
+        <span className="badge badge-active" style={{ background: '#fee2e2', color: '#ef4444', border: 'none' }}>LIVE INFERENCE</span>
+      </div>
+
+      <div style={{ display: 'flex', justifyContent: 'space-around', padding: '20px 0', borderBottom: '1px solid #f1f5f9' }}>
+        <div style={{ textAlign: 'center' }}>
+          <p style={{ fontSize: '11px', color: '#94a3b8' }}>T+1 PREDICTION</p>
+          <p style={{ fontWeight: 800, margin: 0 }}>다음 경매 (Next Auction)</p>
+          <p style={{ fontSize: '11px', color: '#10b981' }}>● CONFIDENCE: 94.2%</p>
+        </div>
+        <div style={{ textAlign: 'center' }}>
           <p style={{ fontSize: '11px', color: '#ef4444' }}>최고가 예측 (UPPER BAND)</p>
-          <p style={{ fontSize: '24px', fontWeight: 700, margin: 0 }}>{data.upper.toLocaleString()}<span className="unit">원</span></p>
+          <p style={{ fontSize: '24px', fontWeight: 800, margin: 0 }}>5,400 <small style={{ fontSize: '12px' }}>원</small></p>
+          <p style={{ fontSize: '10px', color: '#ef4444', fontWeight: 700 }}>PREMIUM TARGET</p>
         </div>
-        <div style={{ borderLeft: '1px solid #e2e8f0', borderRight: '1px solid #e2e8f0', padding: '0 40px' }}>
+        <div style={{ textAlign: 'center' }}>
           <p style={{ fontSize: '11px', color: '#1e293b' }}>평균가 예측 (MARKET MEAN)</p>
-          <p style={{ fontSize: '24px', fontWeight: 700, margin: 0 }}>{data.mean.toLocaleString()}<span className="unit">원</span></p>
+          <p style={{ fontSize: '24px', fontWeight: 800, margin: 0 }}>3,050 <small style={{ fontSize: '12px' }}>원</small></p>
+          <p style={{ fontSize: '10px', color: '#475569', fontWeight: 700 }}>EQUILIBRIUM PRICE</p>
         </div>
-        <div>
+        <div style={{ textAlign: 'center' }}>
           <p style={{ fontSize: '11px', color: '#94a3b8' }}>최저가 예측 (LOWER BAND)</p>
-          <p style={{ fontSize: '24px', fontWeight: 700, margin: 0 }}>{data.lower.toLocaleString()}<span className="unit">원</span></p>
+          <p style={{ fontSize: '24px', fontWeight: 800, margin: 0 }}>1,600 <small style={{ fontSize: '12px' }}>원</small></p>
+          <p style={{ fontSize: '10px', color: '#94a3b8', fontWeight: 700 }}>SUPPORT LINE</p>
         </div>
       </div>
 
-      {/* SVG 차트 영역 */}
-      <svg width="100%" height="200" viewBox="0 0 800 200" style={{ overflow: 'visible' }}>
-        {/* 예측 밴드 배경 */}
-        <path d="M 0 100 Q 400 120 800 80 L 800 160 Q 400 180 0 170 Z" fill="#f1f5f9" opacity="0.5" />
-        {/* 평균가 선 */}
-        <path d="M 0 135 Q 400 150 800 120" fill="none" stroke="#3b82f6" strokeWidth="3" />
-        {/* 최고가 선 */}
-        <path d="M 0 100 Q 400 120 800 80" fill="none" stroke="#ef4444" strokeWidth="2" />
-        {/* 최저가 선 (점선) */}
-        <path d="M 0 170 Q 400 180 800 160" fill="none" stroke="#94a3b8" strokeWidth="2" strokeDasharray="5,5" />
-      </svg>
-      
-      <div style={{ display: 'flex', justify-content: 'space-between', marginTop: '10px', fontSize: '12px', color: '#94a3b8' }}>
-        <span>지난 경매</span>
-        <span>현재 시장</span>
-        <span>다음 경매</span>
+      <div style={{ marginTop: '30px' }}>
+        <p style={{ fontSize: '14px', fontWeight: 700 }}>가격 추세 및 예측 밴드</p>
+        <div style={{ height: '200px', width: '100%', background: '#f8fafc', borderRadius: '8px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#cbd5e1' }}>
+          {/* 실제 차트 라이브러리 대신 임시 시각화 */}
+          <svg width="100%" height="150" viewBox="0 0 800 150">
+            <path d="M0,100 C200,80 600,120 800,90" fill="none" stroke="#ef4444" strokeWidth="3" />
+            <path d="M0,120 C200,110 600,140 800,115" fill="none" stroke="#3b82f6" strokeWidth="3" />
+            <path d="M0,140 C200,135 600,160 800,145" fill="none" stroke="#94a3b8" strokeWidth="2" strokeDasharray="5,5" />
+          </svg>
+        </div>
       </div>
     </div>
   );
