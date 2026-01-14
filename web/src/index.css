@@ -1,6 +1,6 @@
 :root {
   --bg-white: #ffffff;
-  --deep-green: #004d40; /* 진한 초록색 유지 */
+  --deep-green: #004d40;
 }
 
 body {
@@ -8,8 +8,6 @@ body {
   padding: 0;
   font-family: 'Noto Sans KR', sans-serif;
   background-color: var(--bg-white);
-  /* 텍스트 가독성을 높이기 위해 자간(letter-spacing)을 살짝 조정 */
-  letter-spacing: -0.8px; 
 }
 
 .portfolio-wrapper {
@@ -17,15 +15,18 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 100vh;
-  /* 로고 높이 */
-  padding: 110px 10% 0 10%; 
+
+  /* 💡 노란색 원 위치에 맞춘 여백 조정 */
+  /* 상단(Top): 40px, 좌측(Left): 40px */
+  padding: 40px 0 0 40px; 
 }
 
 .main-title {
-  /* 더 안정감 있는 크기로 축소 */
-  font-size: 28px; 
+  /* 더 안정감 있고 작게 조정 (기존 28px -> 22px) */
+  font-size: 22px; 
   font-weight: 700;
   color: var(--deep-green);
   line-height: 1.4;
   margin: 0;
+  letter-spacing: -0.5px;
 }
