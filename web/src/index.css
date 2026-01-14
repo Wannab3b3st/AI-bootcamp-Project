@@ -22,7 +22,7 @@ body {
 
 .main-title {
   /* 글자 크기를 안정감 있게 조정 */
-  font-size: 22px; 
+  font-size: 24px; 
   /* 농넷/KAPE 스타일의 두꺼운 굵기 적용 */
   font-weight: 800; 
   color: var(--deep-green);
