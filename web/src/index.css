@@ -1,7 +1,8 @@
+/* 현대적인 웹폰트 Pretendard 로드 */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 :root {
-  --deep-green: #004d40;
+  --deep-green: #004d40; /* 화훼유통정보 스타일의 진한 초록 */
 }
 
 body {
@@ -9,22 +10,25 @@ body {
   padding: 0;
   font-family: 'Pretendard', -apple-system, sans-serif;
   background-color: #ffffff;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased; /* 글자를 더 매끄럽게 표현 */
 }
 
 .portfolio-wrapper {
   display: flex;
   flex-direction: column;
-  /* 노란색 원 위치(KAPE 로고 높이) 반영 */
+  /* 노란색 원 위치(KAPE 로고 높이)에 맞춘 여백 */
   padding: 45px 0 0 50px; 
 }
 
 .main-title {
-  font-size: 22px;
-  font-weight: 700;
+  /* 글자 크기를 안정감 있게 조정 */
+  font-size: 22px; 
+  /* 농넷/KAPE 스타일의 두꺼운 굵기 적용 */
+  font-weight: 800; 
   color: var(--deep-green);
   margin: 0;
-  letter-spacing: -0.03em;
-  /* 한 줄로 강제 고정 */
+  /* PPT 느낌을 지우는 핵심: 자간을 -0.05em으로 좁게 설정 */
+  letter-spacing: -0.05em; 
+  /* 한 줄 고정 */
   white-space: nowrap; 
 }
