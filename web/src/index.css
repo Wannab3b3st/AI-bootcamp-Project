@@ -65,7 +65,9 @@ body {
 }
 
 .search-section {
-  margin-top: 25px; 
+  /* 노란색 동그라미 위치로 내리기 위해 상단 및 우측 여백 조정 */
+  margin-top: 60px; 
+  margin-right: 20px;
 }
 
 .search-box {
@@ -75,7 +77,8 @@ body {
 }
 
 .search-input {
-  width: 140px;
+  /* 사이즈를 반으로 줄인 콤팩트한 너비 유지 */
+  width: 140px; 
   height: 34px;
   padding: 0 35px 0 15px;
   border: 1.5px solid #cbd5e1;
