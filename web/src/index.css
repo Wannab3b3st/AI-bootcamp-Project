@@ -2,7 +2,7 @@
 
 :root {
   --deep-green: #004d40;
-  --search-blue: #3b82f6;
+  --search-blue: #3b82f6; /* image_b6ff4f.png의 파란색 */
   --muted-text: #94a3b8;
   --border-color: #cbd5e1;
 }
@@ -21,6 +21,7 @@ body {
   padding: 45px 50px 0 50px; 
 }
 
+/* 좌측 타이틀 섹션과 우측 검색 섹션을 양 끝으로 밀어주는 설정 */
 .header-row {
   display: flex;
   justify-content: space-between;
@@ -64,6 +65,7 @@ body {
   padding-bottom: 1px;
 }
 
+/* 🔍 검색창 컨테이너 */
 .search-box {
   position: relative;
   display: flex;
@@ -74,12 +76,14 @@ body {
   width: 260px;
   height: 40px;
   padding: 0 45px 0 20px;
-  border: 1.5px solid #e2e8f0;
+  /* 테두리를 진하게 설정하여 확실히 보이게 함 */
+  border: 1.5px solid #cbd5e1; 
   border-radius: 25px;
   font-family: 'Pretendard', sans-serif;
   font-size: 14px;
   color: #1e293b;
   outline: none;
+  background-color: #ffffff;
   transition: all 0.2s ease;
 }
 
@@ -95,4 +99,6 @@ body {
   color: var(--search-blue);
   font-weight: 900;
   cursor: pointer;
+  /* 아이콘이 텍스트 뒤로 숨지 않도록 z-index 추가 */
+  z-index: 10; 
 }
