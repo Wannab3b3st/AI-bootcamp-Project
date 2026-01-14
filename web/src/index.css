@@ -1,25 +1,46 @@
 :root {
-  --primary-green: #004d40; /* 짙은 그린색 */
-  --border-bottom: #eeeeee;
+  --bg-white: #ffffff;
+  --light-green: #81c784; /* 부드럽고 옅은 그린색 */
+  --soft-gray: #f8f9fa;
 }
 
 body {
   margin: 0;
-  font-family: 'Noto Sans KR', -apple-system, sans-serif;
-  background-color: #ffffff;
+  padding: 0;
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: var(--bg-white); /* 배경은 하얀색 */
+  color: var(--light-green);         /* 기본 글자색은 옅은 그린 */
 }
 
-/* 상단 헤더 스타일 */
-.nav-container {
+.portfolio-wrapper {
   display: flex;
-  align-items: center;
-  padding: 15px 40px;
-  border-bottom: 1px solid var(--border-bottom);
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 150px 10% 0 10%; /* 상단 여백을 150px로 늘려 타이틀을 내림 */
 }
 
-.nav-title {
-  font-size: 18px; /* 글자 크기를 더 작게 조정 */
-  font-weight: 800;
-  color: var(--primary-green);
-  letter-spacing: -0.5px;
+.main-title {
+  font-size: 42px; /* 타이틀 크기 강조 */
+  font-weight: 900;
+  line-height: 1.3;
+  margin: 0;
+  color: var(--light-green); /* 글자색 옅은 그린 */
+  letter-spacing: -1.5px;
+}
+
+.sub-text {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #a5d6a7; /* 서브 텍스트는 조금 더 연한 그린 */
+  opacity: 0.8;
+}
+
+/* 장식용 라인 */
+.accent-line {
+  width: 40px;
+  height: 3px;
+  background-color: var(--light-green);
+  margin-top: 30px;
 }
