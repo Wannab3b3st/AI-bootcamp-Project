@@ -1,47 +1,33 @@
-/* 폰트 불러오기 (Pretendard - 현대적인 웹폰트) */
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 :root {
-  --bg-white: #ffffff;
-  /* KAPE 스타일의 깊이감 있는 진한 녹색 */
-  --deep-green: #00574B; 
-  /* 서브 텍스트용 차분한 회녹색 */
-  --muted-green: #4A6F6A; 
+  --deep-green: #004d40;
 }
 
 body {
   margin: 0;
   padding: 0;
-  /* 프리텐다드를 기본 폰트로 설정 */
-  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-  background-color: var(--bg-white);
-  -webkit-font-smoothing: antialiased; /* 글자를 더 부드럽게 렌더링 */
+  font-family: 'Pretendard', -apple-system, sans-serif;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
 }
 
 .portfolio-wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  min-height: 100vh;
-  /* 아까 지정하신 좌측 상단 위치 유지 (필요시 미세 조정하세요) */
-  padding: 50px 0 0 50px; 
+  padding: 40px 0 0 40px; 
 }
 
-/* 메인 타이틀 컨테이너 */
-.title-container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px; /* 줄 간격 조정 */
-}
-
-/* 타이틀 스타일 */
 .main-title {
-  font-size: 26px; /* 적당한 안정감 있는 크기 */
-  font-weight: 700;  /* 굵게 */
+  font-size: 24px;
+  font-weight: 700;
   color: var(--deep-green);
-  line-height: 1.3;
+  line-height: 1.4;
   margin: 0;
-  letter-spacing: -0.03em; /* 자간을 살짝 좁혀 단단한 느낌 */
+  letter-spacing: -0.03em;
 }
 
-/* "AI 서비스"
+.title-accent {
+  font-weight: 800;
+  font-size: 25px;
+}
