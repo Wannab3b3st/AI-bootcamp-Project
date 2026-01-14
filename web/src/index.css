@@ -1,7 +1,6 @@
 :root {
   --bg-white: #ffffff;
-  --deep-green: #004d40; /* KAPE 로고와 유사한 신뢰감 있는 진한 초록색 */
-  --soft-gray: #666666;
+  --deep-green: #004d40; /* 진한 초록색 유지 */
 }
 
 body {
@@ -9,7 +8,8 @@ body {
   padding: 0;
   font-family: 'Noto Sans KR', sans-serif;
   background-color: var(--bg-white);
-  line-height: 1.5;
+  /* 텍스트 가독성을 높이기 위해 자간(letter-spacing)을 살짝 조정 */
+  letter-spacing: -0.8px; 
 }
 
 .portfolio-wrapper {
@@ -17,30 +17,15 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   min-height: 100vh;
-  /* KAPE 로고 위치 정도의 높이감을 위해 상단 여백을 100px~120px로 설정 */
-  padding: 100px 8% 0 8%; 
+  /* 로고 높이 */
+  padding: 110px 10% 0 10%; 
 }
 
 .main-title {
-  font-size: 40px;
-  font-weight: 800;
-  color: var(--deep-green); /* 진한 초록색 적용 */
-  margin: 0;
-  letter-spacing: -1.5px;
-}
-
-.accent-line {
-  width: 50px;
-  height: 4px;
-  background-color: var(--deep-green);
-  margin-top: 25px;
-  margin-bottom: 25px;
-}
-
-.sub-text {
-  font-size: 18px;
-  font-weight: 500;
-  color: var(--deep-green); /* 서브 텍스트도 통일감 있게 진한 초록색 */
-  opacity: 0.9;
+  /* 더 안정감 있는 크기로 축소 */
+  font-size: 28px; 
+  font-weight: 700;
+  color: var(--deep-green);
+  line-height: 1.4;
   margin: 0;
 }
