@@ -1,1 +1,25 @@
+:root {
+  --primary-green: #004d40; /* 짙은 그린색 */
+  --border-bottom: #eeeeee;
+}
 
+body {
+  margin: 0;
+  font-family: 'Noto Sans KR', -apple-system, sans-serif;
+  background-color: #ffffff;
+}
+
+/* 상단 헤더 스타일 */
+.nav-container {
+  display: flex;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid var(--border-bottom);
+}
+
+.nav-title {
+  font-size: 18px; /* 글자 크기를 더 작게 조정 */
+  font-weight: 800;
+  color: var(--primary-green);
+  letter-spacing: -0.5px;
+}
