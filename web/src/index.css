@@ -3,95 +3,68 @@
 :root {
   --deep-green: #004d40;
   --search-blue: #3b82f6;
-  --underline: #cbd5e1;
+  --red: #ef4444;
+  --bg: #f8fafc;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Pretendard', sans-serif;
-  background-color: #ffffff;
+  background-color: var(--bg);
 }
 
 .portfolio-wrapper {
-  position: relative; /* 자식 요소들의 절대 위치 기준점이 됩니다 */
-  padding: 50px 60px;
+  position: relative;
+  padding: 40px 60px;
+  min-height: 100vh;
 }
 
-.main-title {
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--deep-green);
-  margin: 0 0 12px 0;
-}
+/* 🔍 위치 조정을 위한 포인트 (사용자님 수정용) */
+.auth-container { position: absolute; top: 40px; right: 280px; display: flex; gap: 20px; }
+.search-box { position: absolute; top: 85px; right: 280px; }
 
-.info-container {
+/* 🔴 빨간색 영역: 시장가 대역 및 지수 섹션 */
+.main-content {
+  margin-top: 120px; /* 헤더와의 간격 */
   display: flex;
   gap: 25px;
 }
 
-.info-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.info-label {
-  font-size: 11px;
-  font-weight: 800;
-  color: #94a3b8;
-}
-
-.info-value {
-  font-size: 13px;
-  font-weight: 800;
-  color: #1e293b;
-  border-bottom: 2px solid var(--underline);
-  padding-bottom: 1px;
-}
-
-/* 💡 노란색 동그라미 위치 (로그인/회원가입) */
-.auth-container {
-  position: absolute;
-  top: 50px;    /* 👈 위에서 얼마나 내릴지 (숫자 수정 가능) */
-  right: 160px; /* 👈 오른쪽에서 얼마나 띄울지 (숫자 수정 가능) */
+.metrics-row {
   display: flex;
   gap: 20px;
+  flex: 2; /* 왼쪽 빨간색 영역 비중 */
 }
 
-.auth-item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 13px;
-  font-weight: 700;
-  color: #334155;
-  cursor: pointer;
-  white-space: nowrap;
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 250px;
 }
 
-/* 💡 하늘색 동그라미 위치 (검색창) */
-.search-box {
-  position: absolute;
-  top: 80px;   /* 👈 위에서 얼마나 내릴지 (숫자 수정 가능) */
-  right: 200px; /* 👈 오른쪽에서 얼마나 띄울지 (숫자 수정 가능) */
-}
+.card-title { font-size: 12px; font-weight: 700; color: #94a3b8; margin-bottom: 20px; }
+.price-max { color: var(--red); font-size: 24px; font-weight: 800; }
+.price-mean { font-size: 42px; font-weight: 900; color: #1e293b; margin: 10px 0; }
+.price-min { color: var(--search-blue); font-size: 20px; font-weight: 700; }
 
-.search-input {
-  width: 140px; 
-  height: 34px;
-  padding: 0 35px 0 15px;
-  border: 1.5px solid #cbd5e1;
+/* 🟡 노란색 영역: ML Feature Analysis 섹션 */
+.analysis-section {
+  flex: 1.2; /* 오른쪽 노란색 영역 비중 */
+  background: white;
   border-radius: 20px;
-  font-size: 12px;
-  outline: none;
+  padding: 30px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
 }
 
-.search-icon {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 14px;
-  color: var(--search-blue);
-}
+.analysis-item { margin-bottom: 22px; }
+.analysis-label { display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; margin-bottom: 8px; }
+.bar-bg { width: 100%; height: 8px; background: #f1f5f9; border-radius: 4px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s ease; }
+
+/* 아이콘 스타일 */
+.search-icon-svg { width: 16px; height: 16px; color: var(--search-blue); }
+.auth-icon-svg { width: 18px; height: 18px; }
