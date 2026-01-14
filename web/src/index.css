@@ -3,93 +3,100 @@
 :root {
   --deep-green: #004d40;
   --search-blue: #3b82f6;
-  --muted-text: #94a3b8;
-  --border-light: #e2e8f0;
+  --muted-text: #64748b;
+  --underline: #cbd5e1;
 }
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'Pretendard', sans-serif;
-  background-color: #fffff;
+  background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
 }
 
 .portfolio-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 0;
+  padding: 50px 60px; /* 전체 여백 확보 */
+  min-height: 100vh;
 }
 
 .header-row {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   width: 100%;
 }
 
-.title-section {
-  margin-top: 55px;
-  margin-left: 60px;
-}
-
+/* 좌측 섹션 */
 .main-title {
   font-size: 22px;
   font-weight: 800;
   color: var(--deep-green);
-  margin: 0;
+  margin: 0 0 12px 0;
   letter-spacing: -0.05em;
-  white-space: nowrap;
 }
 
 .info-container {
   display: flex;
-  gap: 15px;
-  margin-top: 15px;
+  gap: 25px;
 }
 
 .info-item {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .info-label {
   font-size: 11px;
   font-weight: 800;
-  color: var(--muted-text);
+  color: #94a3b8;
   letter-spacing: 0.05em;
 }
 
-.dropdown-box {
+.info-value {
+  font-size: 13px;
+  font-weight: 800;
+  color: #1e293b;
+  border-bottom: 2px solid var(--underline); /* 강조된 밑줄 스타일 복구 */
+  padding-bottom: 1px;
+}
+
+/* 우측 섹션 (Auth + Search) */
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 25px; /* 로그인과 검색창 사이 간격 */
+}
+
+/* 🆕 로그인/회원가입 (image_b93d68.png 참고) */
+.auth-container {
+  display: flex;
+  gap: 20px;
+}
+
+.auth-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  min-width: 100px;
-  height: 32px;
-  padding: 0 10px;
-  border: 1px solid var(--border-light);
-  border-radius: 6px;
-  background-color: #ffffff;
-  cursor: default;
-}
-
-.dropdown-text {
+  gap: 6px;
   font-size: 13px;
   font-weight: 700;
-  color: #1e293b;
+  color: #334155;
+  cursor: pointer;
 }
 
-.dropdown-arrow {
-  font-size: 10px;
-  color: #94a3b8;
-  margin-left: 8px;
+.auth-item:hover {
+  color: var(--search-blue);
 }
 
-.search-section {
-  margin-top: 85px;
-  margin-right: 140px;
+.auth-icon {
+  font-size: 16px;
 }
 
+/* 검색창 */
 .search-box {
   position: relative;
   display: flex;
@@ -97,7 +104,7 @@ body {
 }
 
 .search-input {
-  width: 140px;
+  width: 150px;
   height: 34px;
   padding: 0 35px 0 15px;
   border: 1.5px solid #cbd5e1;
