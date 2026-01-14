@@ -70,17 +70,6 @@ function App() {
         </div>
       </div>
 
-      <div className="auth-container">
-        <div className="auth-item">
-          <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A7.5 7.5 0 014.501 20.118z"/></svg>
-          로그인
-        </div>
-        <div className="auth-item">
-          <svg width="18" height="18" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 014 19.235z"/></svg>
-          회원가입
-        </div>
-      </div>
-
       <div className="search-box">
         <input type="text" className="search-input" placeholder="검색" />
         <div style={{position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', color: '#3b82f6', display: 'flex'}}>
