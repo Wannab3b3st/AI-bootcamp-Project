@@ -15,15 +15,16 @@ body {
 .portfolio-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 40px 0 0 40px; 
+  /* 노란색 원 위치(KAPE 로고 높이) 반영 */
+  padding: 45px 0 0 50px; 
 }
 
 .main-title {
   font-size: 22px;
   font-weight: 700;
   color: var(--deep-green);
-  line-height: 1.4;
   margin: 0;
   letter-spacing: -0.03em;
-  white-space: nowrap;
+  /* 한 줄로 강제 고정 */
+  white-space: nowrap; 
 }
