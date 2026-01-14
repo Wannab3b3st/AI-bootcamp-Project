@@ -5,66 +5,59 @@
   --search-blue: #3b82f6;
   --red: #ef4444;
   --bg: #f8fafc;
+  --text-main: #1e293b;
+  --text-muted: #64748b;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Pretendard', sans-serif;
-  background-color: var(--bg);
-}
+body { margin: 0; padding: 0; font-family: 'Pretendard', sans-serif; background-color: var(--bg); color: var(--text-main); }
 
-.portfolio-wrapper {
-  position: relative;
-  padding: 40px 60px;
-  min-height: 100vh;
-}
+.portfolio-wrapper { position: relative; padding: 30px 40px; min-height: 100vh; }
 
-/* 🔍 위치 조정을 위한 포인트 (사용자님 수정용) */
-.auth-container { position: absolute; top: 40px; right: 280px; display: flex; gap: 20px; }
-.search-box { position: absolute; top: 85px; right: 280px; }
+/* 로그인/검색창 위치 (직접 좌표 수정 가능) */
+.auth-container { position: absolute; top: 30px; right: 230px; display: flex; gap: 15px; }
+.search-box { position: absolute; top: 75px; right: 230px; }
 
-/* 🔴 빨간색 영역: 시장가 대역 및 지수 섹션 */
+/* 메인 대시보드 레이아웃 */
 .main-content {
-  margin-top: 120px; /* 헤더와의 간격 */
+  margin-top: 100px;
   display: flex;
-  gap: 25px;
+  flex-direction: row;
+  gap: 15px;
+  align-items: flex-start;
 }
 
-.metrics-row {
-  display: flex;
-  gap: 20px;
-  flex: 2; /* 왼쪽 빨간색 영역 비중 */
-}
+.top-row { display: flex; gap: 15px; flex: 2; }
 
 .card {
   background: white;
-  border-radius: 16px;
-  padding: 25px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
   flex: 1;
-  min-width: 250px;
 }
 
-.card-title { font-size: 12px; font-weight: 700; color: #94a3b8; margin-bottom: 20px; }
-.price-max { color: var(--red); font-size: 24px; font-weight: 800; }
-.price-mean { font-size: 42px; font-weight: 900; color: #1e293b; margin: 10px 0; }
-.price-min { color: var(--search-blue); font-size: 20px; font-weight: 700; }
+.card-title { font-size: 11px; font-weight: 700; color: #94a3b8; margin-bottom: 12px; text-transform: uppercase; }
 
-/* 🟡 노란색 영역: ML Feature Analysis 섹션 */
-.analysis-section {
-  flex: 1.2; /* 오른쪽 노란색 영역 비중 */
-  background: white;
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-}
+/* 가격 스타일 */
+.price-max { color: var(--red); font-size: 15px; font-weight: 800; }
+.price-mean { font-size: 32px; font-weight: 900; margin: 8px 0; }
+.price-min { color: var(--search-blue); font-size: 14px; font-weight: 700; }
 
-.analysis-item { margin-bottom: 22px; }
-.analysis-label { display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; margin-bottom: 8px; }
-.bar-bg { width: 100%; height: 8px; background: #f1f5f9; border-radius: 4px; overflow: hidden; }
-.bar-fill { height: 100%; border-radius: 4px; transition: width 0.5s ease; }
+/* 원형 차트 스타일 */
+.score-container { display: flex; align-items: center; gap: 12px; }
+.circular-chart { width: 45px; height: 45px; }
+.circle-bg { fill: none; stroke: #f1f5f9; stroke-width: 3.8; }
+.circle { fill: none; stroke-width: 3.8; stroke-linecap: round; }
+.percentage { font-size: 10px; font-weight: 800; text-anchor: middle; fill: var(--text-main); }
 
-/* 아이콘 스타일 */
-.search-icon-svg { width: 16px; height: 16px; color: var(--search-blue); }
-.auth-icon-svg { width: 18px; height: 18px; }
+/* ML 분석 카드 스타일 */
+.analysis-card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); flex: 1.1; }
+.analysis-item { margin-bottom: 14px; }
+.analysis-label { font-size: 12px; font-weight: 800; display: flex; justify-content: space-between; }
+.analysis-desc { font-size: 10px; font-weight: 700; color: var(--text-muted); margin-top: 2px; line-height: 1.4; }
+.bar-bg { width: 100%; height: 6px; background: #f1f5f9; border-radius: 3px; margin-top: 6px; }
+.bar-fill { height: 100%; border-radius: 3px; }
+
+/* 아이콘 및 입력창 */
+.auth-item { display: flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 700; cursor: pointer; color: #475569; }
+.search-input { width: 140px; height: 32px; padding: 0 35px 0 15px; border: 1px solid #cbd5e1; border-radius: 16px; font-size: 12px; outline: none; }
