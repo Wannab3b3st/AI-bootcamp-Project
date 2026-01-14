@@ -12,22 +12,24 @@ function App() {
           <div className="info-container">
             <div className="info-item">
               <span className="info-label">MARKET:</span>
-              <span className="info-value">aT화훼(양재)</span>
+              <div className="dropdown-box">
+                <span className="dropdown-text">aT화훼(양재)</span>
+                <span className="dropdown-arrow">▼</span>
+              </div>
             </div>
             <div className="info-item">
               <span className="info-label">CATEGORY:</span>
-              <span className="info-value">절화</span>
+              <div className="dropdown-box">
+                <span className="dropdown-text">절화</span>
+                <span className="dropdown-arrow">▼</span>
+              </div>
             </div>
           </div>
         </div>
 
         <div className="search-section">
           <div className="search-box">
-            <input 
-              type="text" 
-              className="search-input" 
-              placeholder="검색" 
-            />
+            <input type="text" className="search-input" placeholder="검색" />
             <span className="search-icon">🔍</span>
           </div>
         </div>
