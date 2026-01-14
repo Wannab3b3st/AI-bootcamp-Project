@@ -4,28 +4,32 @@
   --deep-green: #004d40;
   --search-blue: #3b82f6;
   --muted-text: #94a3b8;
-  --border-color: #cbd5e1;
+  --border-light: #e2e8f0;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Pretendard', -apple-system, sans-serif;
-  background-color: #ffffff;
+  font-family: 'Pretendard', sans-serif;
+  background-color: #fffff;
   -webkit-font-smoothing: antialiased;
 }
 
 .portfolio-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 45px 50px 0 50px; 
+  padding: 0;
 }
 
 .header-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
   width: 100%;
+}
+
+.title-section {
+  margin-top: 55px;
+  margin-left: 60px;
 }
 
 .main-title {
@@ -39,14 +43,14 @@ body {
 
 .info-container {
   display: flex;
-  gap: 25px;
-  margin-top: 12px;
+  gap: 15px;
+  margin-top: 15px;
 }
 
 .info-item {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .info-label {
@@ -56,18 +60,34 @@ body {
   letter-spacing: 0.05em;
 }
 
-.info-value {
+.dropdown-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100px;
+  height: 32px;
+  padding: 0 10px;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  background-color: #ffffff;
+  cursor: default;
+}
+
+.dropdown-text {
   font-size: 13px;
-  font-weight: 800;
+  font-weight: 700;
   color: #1e293b;
-  border-bottom: 1px solid var(--border-color);
-  padding-bottom: 1px;
+}
+
+.dropdown-arrow {
+  font-size: 10px;
+  color: #94a3b8;
+  margin-left: 8px;
 }
 
 .search-section {
-  /* 노란색 동그라미 위치로 내리기 위해 상단 및 우측 여백 조정 */
-  margin-top: 60px; 
-  margin-right: 20px;
+  margin-top: 85px;
+  margin-right: 140px;
 }
 
 .search-box {
@@ -77,23 +97,17 @@ body {
 }
 
 .search-input {
-  /* 사이즈를 반으로 줄인 콤팩트한 너비 유지 */
-  width: 140px; 
+  width: 140px;
   height: 34px;
   padding: 0 35px 0 15px;
   border: 1.5px solid #cbd5e1;
   border-radius: 20px;
-  font-family: 'Pretendard', sans-serif;
   font-size: 12px;
-  color: #1e293b;
   outline: none;
-  background-color: #ffffff;
-  transition: all 0.2s ease;
 }
 
 .search-input:focus {
   border-color: var(--search-blue);
-  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
 }
 
 .search-icon {
@@ -101,7 +115,4 @@ body {
   right: 12px;
   font-size: 14px;
   color: var(--search-blue);
-  font-weight: 900;
-  cursor: pointer;
-  z-index: 10;
 }
