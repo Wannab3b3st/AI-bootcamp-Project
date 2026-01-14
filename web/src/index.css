@@ -18,7 +18,7 @@ body {
 .portfolio-wrapper {
   display: flex;
   flex-direction: column;
-  padding: 50px 60px; /* 전체 여백 확보 */
+  padding: 50px 60px;
   min-height: 100vh;
 }
 
@@ -29,7 +29,7 @@ body {
   width: 100%;
 }
 
-/* 좌측 섹션 */
+/* 좌측 섹션 스타일 유지 */
 .main-title {
   font-size: 22px;
   font-weight: 800;
@@ -60,19 +60,21 @@ body {
   font-size: 13px;
   font-weight: 800;
   color: #1e293b;
-  border-bottom: 2px solid var(--underline); /* 강조된 밑줄 스타일 복구 */
+  border-bottom: 2px solid var(--underline);
   padding-bottom: 1px;
 }
 
-/* 우측 섹션 (Auth + Search) */
+/* 💡 우측 섹션: 동그라미 위치로 대폭 이동 */
 .right-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 25px; /* 로그인과 검색창 사이 간격 */
+  align-items: flex-start; /* 내부 요소를 왼쪽 정렬 */
+  margin-top: 10px; /* 노란색 동그라미 높이 조절 */
+  margin-right: 280px; /* 💡 오른쪽 끝에서 왼쪽(동그라미 위치)으로 밀기 */
+  gap: 20px; /* 로그인과 검색창 사이의 수직 간격 */
 }
 
-/* 🆕 로그인/회원가입 (image_b93d68.png 참고) */
+/* 로그인/회원가입 아이콘 스타일 */
 .auth-container {
   display: flex;
   gap: 20px;
@@ -86,17 +88,14 @@ body {
   font-weight: 700;
   color: #334155;
   cursor: pointer;
-}
-
-.auth-item:hover {
-  color: var(--search-blue);
+  white-space: nowrap;
 }
 
 .auth-icon {
   font-size: 16px;
 }
 
-/* 검색창 */
+/* 콤팩트한 검색창 스타일 유지 */
 .search-box {
   position: relative;
   display: flex;
@@ -104,13 +103,14 @@ body {
 }
 
 .search-input {
-  width: 150px;
+  width: 140px; 
   height: 34px;
   padding: 0 35px 0 15px;
   border: 1.5px solid #cbd5e1;
   border-radius: 20px;
   font-size: 12px;
   outline: none;
+  background-color: #ffffff;
 }
 
 .search-input:focus {
