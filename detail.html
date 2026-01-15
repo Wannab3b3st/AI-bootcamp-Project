@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="detail.css">
+    <title>가격 예측 서비스 - 분석 리포트</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="web-wrapper">
+        <div class="web-container">
+            <header class="header">
+                <button class="back-btn" onclick="history.back()">← 뒤로</button>
+                <h1 class="logo" id="detail-title">쏠레이 가격 예측</h1>
+            </header>
+
+            <section class="upper-dashboard">
+                <div class="info-card price-range-card main-stretch">
+                    <h4 class="card-title">현재 시장 가격 대역</h4>
+                    <div class="price-display">
+                        <div class="max-box">최고가 (MAX) <span class="val">5,806</span> KRW</div>
+                        <div class="mean-display">
+                            <span class="sub">시장 평균 단가 (MEAN)</span>
+                            <strong class="main-val">2,866</strong> <span class="unit">KRW</span>
+                        </div>
+                        <div class="min-box">최저가 (MIN) <span class="val">1,861</span> KRW</div>
+                    </div>
+                </div>
+
+                <div class="info-card predict-card main-stretch">
+                    <h4 class="card-title">내일 가격 예측 <small class="date">2026.01.16</small></h4>
+                    <div class="predict-content">
+                        <ul class="price-list">
+                            <li><span class="dot red"></span> 최고가:<strong> ₩15,400</strong></li>
+                            <li><span class="dot green"></span> 평균: <strong> ₩12,800</strong></li>
+                            <li><span class="dot blue"></span> 최저가: <strong> ₩9,200</strong></li>
+                        </ul>
+                        <div class="trend-box">
+                            <span class="trend-label">📈 등락 예측 <small>(정확도:94%)</small></span>
+                            <div class="trend-result">상승 <span class="arrow">▲</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="middle-row graph-section">
+                <div class="chart-header">
+                    <h3>이전 5회 경매 상세 동향</h3>
+                </div>
+                <div class="canvas-holder">
+                    <canvas id="predictionChart"></canvas>
+                </div>
+            </section>
+
+            <section class="lower-row">
+                <div class="info-card chart-card">
+                    <h4 class="card-title">출하 최적화 지수</h4>
+                    <div class="circular-chart-container">
+                        <div class="circular-progress" style="--percent: 61;">
+                            <span class="score-val">61</span>
+                        </div>
+                        <div class="chart-info">
+                            <strong>물량 조절 필요</strong>
+                            <p>• PREMIUM RATIO: 2.18X</p>
+                            <p>• LOW PRESSURE: 1,005</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card chart-card">
+                    <h4 class="card-title">매입 효율화 점수</h4>
+                    <div class="circular-chart-container">
+                        <div class="circular-progress blue" style="--percent: 41;">
+                            <span class="score-val">41</span>
+                        </div>
+                        <div class="chart-info">
+                            <strong>최소량 유지</strong>
+                            <p>• LOW PRESSURE: 1,005</p>
+                            <p>• SPREAD: 3,945</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card analysis-card">
+                    <h4 class="card-title">AI 모델 주요 변수 분석</h4>
+                    <div class="analysis-list">
+                        <p>시장 변동성 및 등락 폭이 가격 결정의 주요 요인으로 분석되었습니다.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="detail.js"></script>
+</body>
+</html>

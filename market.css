@@ -1,0 +1,55 @@
+/* 레이아웃 설정 */
+body {
+    margin: 0; padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f5f6f7;
+    display: flex; justify-content: center; align-items: center;
+    height: 100vh; overflow: hidden;
+}
+
+.web-container {
+    width: 850px; height: 92vh;
+    background-color: white; border-radius: 24px;
+    padding: 50px 55px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box; display: flex; flex-direction: column;
+    justify-content: space-between;
+}
+
+.logo { font-size: 28px; color: #000; margin: 0; font-weight: 800; }
+.tagline { font-size: 14px; color: #999; margin: 6px 0 25px 0; }
+
+.section { margin-bottom: 25px; }
+h3 { font-size: 17px; margin-bottom: 15px; color: #222; }
+
+.chip-group { display: flex; gap: 12px; flex-wrap: wrap; }
+.chip {
+    padding: 12px 20px; border-radius: 14px; border: 1px solid #eee;
+    background: white; cursor: pointer; font-size: 14px; transition: 0.2s;
+    color: #555;
+}
+
+/* [핵심] 클릭 시 옅은 파란색 테두리 적용 */
+.chip.active, .card.active {
+    border: 2px solid #a5d8ff !important;
+    background-color: #f0f7ff !important;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.card-list { display: flex; flex-direction: column; gap: 12px; }
+.card {
+    display: none; /* 필터링 전에는 숨김 */
+    border: 1px solid #f1f1f1; padding: 22px 30px;
+    border-radius: 20px; background: white; cursor: pointer; transition: 0.2s;
+}
+.card.show { display: block; }
+
+.card-header { display: flex; justify-content: space-between; }
+.badge { font-size: 11px; background: #f0f0f0; padding: 3px 8px; border-radius: 5px; color: #666; }
+.card-desc { font-size: 15px; color: #666; margin: 12px 0; }
+
+.bottom-bar {
+    background: #1a1c22; color: white; padding: 18px 30px;
+    border-radius: 18px; display: flex; justify-content: space-between; align-items: center;
+}
+.home-btn { background: #ff4d6d; border: none; color: white; padding: 10px 22px; border-radius: 12px; font-weight: bold; cursor: pointer; }

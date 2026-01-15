@@ -1,0 +1,104 @@
+/* 1. 기본 설정 및 화면 중앙 정렬 */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f8f9fa; /* 배경색을 살짝 깔아 컨테이너를 돋보이게 함 */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* 화면 전체 높이 사용 */
+}
+
+/* 2. 카드 컨테이너 디자인 */
+.container {
+    width: 380px;
+    padding: 50px 30px;
+    text-align: center;
+    background: radial-gradient(circle at top right, #fff5f6, #ffffff);
+    border-radius: 30px; /* 모서리 둥글게 */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05); /* 부드러운 그림자 */
+}
+
+/* 3. 상단 아이콘 구역 */
+.icon-container {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-circle {
+    width: 70px;
+    height: 70px;
+    background-color: #fff1f3;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-icon {
+    font-size: 30px;
+}
+
+/* 4. 제목 및 하이라이트 효과 */
+.main-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #1a1c22;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #ff4d6d;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+/* 글자 아래 분홍색 굵은 밑줄 */
+.highlight::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 100%;
+    height: 10px;
+    background-color: #ff4d6d;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+/* 5. 설명 문구 */
+.description {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+/* 6. 분홍색 버튼 디자인 복구 */
+.search-btn {
+    background-color: #ff4d6d; /* 분홍색 배경 */
+    color: white;              /* 흰색 글자 */
+    border: none;
+    padding: 16px 40px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;       /* 알약 모양 */
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 77, 109, 0.3);
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.search-btn:hover {
+    transform: translateY(-3px);
+    background-color: #ff3357;
+    box-shadow: 0 12px 25px rgba(255, 77, 109, 0.4);
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="market.css">
+    <title>가격 예측 서비스</title>
+</head>
+<body>
+    <div class="web-wrapper">
+        <div class="web-container">
+            <header class="header">
+                <div class="header-left">
+                    <h1 class="logo">가격 예측 AI 서비스</h1>
+                    <p class="tagline">당신을 위한 최적의 꽃 가격 예측 안내서</p>
+                </div>
+            </header>
+
+            <section class="section">
+                <h3>어느 꽃 시장을 방문하시나요?</h3>
+                <div class="chip-group" id="market-group">
+                    <button class="chip">🏢 aT화훼(양재)</button>
+                    <button class="chip">🏢 부산화훼(엄궁)</button>
+                    <button class="chip">🏢 부경화훼(강동)</button>
+                    <button class="chip">🏢 광주원예(풍암)</button>
+                    <button class="chip">🏢 한국화훼(음성)</button>
+                    <button class="chip">🏢 한국화훼(고양)</button>
+                    <button class="chip">🏢 영남화훼(김해)</button>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>찾으시는 꽃 품목을 선택하세요.</h3>
+                <div class="chip-group" id="category-group">
+                    <button class="chip">🌹 프리지아</button>
+                    <button class="chip">🌷 국화</button>
+                </div>
+            </section>
+
+            <section class="section">
+                <h3>구체적인 품종을 선택하세요.</h3>
+                <div class="card-list" id="variety-list">
+                    <div class="card" data-category="프리지아">
+                        <div class="card-header">
+                            <strong>쏠레이</strong> <span class="badge">연중</span>
+                        </div>
+                        <p class="card-desc">햇살 같은 옐로우 컬러의 생기 있는 장미</p>
+                    </div>
+
+                    <div class="card" data-category="국화">
+                        <div class="card-header">
+                            <strong>포드</strong> <span class="badge">연중</span>
+                        </div>
+                        <p class="card-desc">단단한 꽃잎으로 활용도가 높은 국화</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="bottom-bar">
+                <div class="info" id="selection-info">시장을 선택해주세요</div>
+                <button class="home-btn" onclick="location.href='popup.html'">처음으로</button>
+            </footer>
+        </div>
+    </div>
+    <script src="market.js"></script>
+</body>
+</html>

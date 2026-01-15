@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "BloomLink",
+  "version": "1.0",
+  "description": "전국 꽃 시장 정보 안내 서비스",
+  "action": {
+    "default_popup": "popup.html",
+    "default_width": 400,
+    "default_height": 500
+  },
+  "permissions": []
+}
