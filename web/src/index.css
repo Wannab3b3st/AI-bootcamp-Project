@@ -1,27 +1,16 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
-* {
-  box-sizing: border-box;
-  -webkit-font-smoothing: antialiased;
-}
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   padding: 0;
-  /* 💡 폰트를 깔끔한 프리텐다드로 통일 */
-  font-family: 'Pretendard', -apple-system, sans-serif;
-  /* 💡 1페이지의 연한 핑크빛 배경색 설정 */
-  background-color: #fffcfc; 
+  font-family: 'Pretendard', sans-serif;
+  background-color: #fffcfc; /* 랜딩 페이지 배경색 */
   color: #1e293b;
   overflow-x: hidden;
 }
 
-/* 💡 버튼 클릭 시 생기는 파란 테두리 제거 */
-button:focus, input:focus {
-  outline: none;
-}
+#root { min-height: 100vh; }
 
-/* 💡 부드러운 페이지 전환을 위한 기본 설정 */
-#root {
-  min-height: 100vh;
-}
+button { cursor: pointer; border: none; font-family: 'Pretendard', sans-serif; }
